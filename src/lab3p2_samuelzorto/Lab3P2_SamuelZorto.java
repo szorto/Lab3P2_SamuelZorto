@@ -250,9 +250,17 @@ public class Lab3P2_SamuelZorto {
                                     break;
 
                                 case 2:
+
                                     break;
 
                                 case 3:
+                                    System.out.println("");
+                                    for (Concesionaria cc : con) {
+                                        System.out.println("" + cc.getVehi().indexOf(cc) + "- " + cc.getVehi());
+                                    }
+                                    System.out.print("Ingrese la posicion del vehiculo que desea eliminar: ");
+                                    int poss = entrada.nextInt();
+                                    c.getVehi().remove(poss);
                                     break;
                             }
                         }
