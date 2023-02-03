@@ -46,19 +46,40 @@ public class Lab3P2_SamuelZorto {
                                 }
                             }
                             con.add(new Concesionaria(nomb, id, dir, sald));
-                            System.out.println(con.get(con.size()-1));
+                            System.out.println(con.get(con.size() - 1));
                             System.out.println("");
                             break;
-                            
+
                         case 2:
+                            System.out.println("");
                             for (Concesionaria c : con) {
                                 System.out.println(c);
                             }
-                            
-                            System.out.print("Ingrese el id del cliente que desea eliminar: ");
+
+                            System.out.print("Ingrese el id de la concesionaria que desea eliminar: ");
                             int eli = entrada.nextInt();
-                            con.remove(eli);
+                            for (Concesionaria c : con) {
+                                if(c.getId() == eli){
+                                    con.remove(eli);
+                                }
+                            }
+                            
                             break;
+
+                        case 3:
+                            System.out.println("");
+                            for (Concesionaria c : con) {
+                                System.out.println(c);
+                            }
+                            System.out.print("Ingrese el id de la concesionaria que desea modificar: ");
+                            int elii = entrada.nextInt();
+                            System.out.print("Cambie la direccion: ");
+                            String dess =entrad.nextLine();
+                            for (Concesionaria c : con) {
+                                if(c.getId() == elii){
+                                    c.setDireccion(dess);
+                                }
+                            }
                     }
 
                     break;
@@ -85,15 +106,19 @@ public class Lab3P2_SamuelZorto {
                             System.out.println(cli);
                             System.out.println("");
                             break;
-                            
+
                         case 2:
                             for (Cliente c : cli) {
                                 System.out.println(c);
                             }
-                            
+
                             System.out.print("Ingrese el id del cliente que desea eliminar: ");
                             int eli = entrada.nextInt();
-                            cli.remove(eli);
+                            for (Cliente c : cli) {
+                                if(c.getId() == eli){
+                                    cli.remove(eli);
+                                }
+                            }
                             break;
                     }
 
