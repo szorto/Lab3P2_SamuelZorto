@@ -7,24 +7,24 @@ import java.util.ArrayList;
  * @author szorto
  */
 public class Cliente {
-    private String id, nomb;
+    private String nomb;
     private ArrayList<Vehiculos> vehi = new ArrayList();
-    private int saldo;
+    private int saldo, id;
 
     public Cliente() {
     }
 
-    public Cliente(String id, String nomb, int saldo) {
+    public Cliente(int id, String nomb, int saldo) {
         this.id = id;
         this.nomb = nomb;
         this.saldo = saldo;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

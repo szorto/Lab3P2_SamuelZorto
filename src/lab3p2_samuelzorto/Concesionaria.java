@@ -7,15 +7,15 @@ import java.util.ArrayList;
  * @author szorto
  */
 public class Concesionaria {
-    private String nomb, id, direccion;
+    private String nomb, direccion;
     private ArrayList<Vehiculos> vehi = new ArrayList();
     private ArrayList<Cliente> cli = new ArrayList();
-    private int saldo;
+    private int saldo, id;
 
     public Concesionaria() {
     }
 
-    public Concesionaria(String nomb, String id, String direccion, int saldo) {
+    public Concesionaria(String nomb, int id, String direccion, int saldo) {
         this.nomb = nomb;
         this.id = id;
         this.direccion = direccion;
@@ -30,11 +30,11 @@ public class Concesionaria {
         this.nomb = nomb;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -72,7 +72,7 @@ public class Concesionaria {
 
     @Override
     public String toString() {
-        return "Concesionaria{" + "nomb=" + nomb + ", id=" + id + ", direccion=" + direccion + ", vehi=" + vehi + ", cli=" + cli + ", saldo=" + saldo + '}';
+        return "Concesionaria   " + "nomb: " + nomb + "/ id: " + id + "/ direccion: " + direccion + "/ vehi: " + vehi + "/ cli: " + cli + "/ saldo: " + saldo;
     }
     
     
