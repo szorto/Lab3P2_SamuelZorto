@@ -258,61 +258,61 @@ public class Lab3P2_SamuelZorto {
                                     int posss = entrada.nextInt();
                                     int elegi;
                                     for (Concesionaria cc : con) {
-                                        if(cc.getVehi().get(posss) instanceof Carro){
+                                        if (cc.getVehi().get(posss) instanceof Carro) {
                                             System.out.println("");
                                             System.out.println("Ingrese lo que quiere modificar:\n"
                                                     + "[1] Cantidad de puertas\n"
                                                     + "[2] Desc. de motor\n"
                                                     + "[3] Velocidad maxima");
                                             elegi = entrada.nextInt();
-                                            switch(elegi){
+                                            switch (elegi) {
                                                 case 1:
                                                     System.out.print("Ingrese la cantidad de puertas: ");
                                                     int pu = entrada.nextInt();
-                                                    ((Carro)c.getVehi().get(c.getVehi().indexOf(c))).setPuertas(pu);
+                                                    ((Carro) c.getVehi().get(c.getVehi().indexOf(c))).setPuertas(pu);
                                                     break;
                                                 case 2:
                                                     System.out.print("Ingrese la descripcion del motor: ");
                                                     String desccc = entrad.nextLine();
-                                                    ((Carro)c.getVehi().get(c.getVehi().indexOf(c))).setDescripcion(desccc);
+                                                    ((Carro) c.getVehi().get(c.getVehi().indexOf(c))).setDescripcion(desccc);
                                                     break;
                                                 case 3:
                                                     System.out.print("Ingrese la velocidad maxima: ");
                                                     int vell = entrada.nextInt();
-                                                    ((Carro)c.getVehi().get(c.getVehi().indexOf(c))).setVelocidad(vell);
+                                                    ((Carro) c.getVehi().get(c.getVehi().indexOf(c))).setVelocidad(vell);
                                                     break;
                                             }
-                                        }else if(cc.getVehi().get(posss) instanceof Camion){
+                                        } else if (cc.getVehi().get(posss) instanceof Camion) {
                                             System.out.println("");
                                             System.out.println("Ingrese lo que quiere modificar:\n"
                                                     + "[1] Vol. de carga\n"
                                                     + "[2] Atura\n"
                                                     + "[2] Retroexcavadora");
                                             int jk = entrada.nextInt();
-                                            switch(jk){
-                                                
+                                            switch (jk) {
+
                                             }
                                             elegi = entrada.nextInt();
-                                            switch(elegi){
-                                                
+                                            switch (elegi) {
+
                                             }
-                                        }else if(cc.getVehi().get(posss) instanceof Bus){
-                                            
+                                        } else if (cc.getVehi().get(posss) instanceof Bus) {
+
                                             elegi = entrada.nextInt();
-                                            switch(elegi){
-                                                
+                                            switch (elegi) {
+
                                             }
-                                        }else if(cc.getVehi().get(posss) instanceof Moto){
-                                            
+                                        } else if (cc.getVehi().get(posss) instanceof Moto) {
+
                                             elegi = entrada.nextInt();
-                                            switch(elegi){
-                                                
+                                            switch (elegi) {
+
                                             }
-                                        }else if(cc.getVehi().get(posss) instanceof Bici){
-                                            
+                                        } else if (cc.getVehi().get(posss) instanceof Bici) {
+
                                             elegi = entrada.nextInt();
-                                            switch(elegi){
-                                                
+                                            switch (elegi) {
+
                                             }
                                         }
                                     }
@@ -335,6 +335,55 @@ public class Lab3P2_SamuelZorto {
                     break;
 
                 case 4:
+                    System.out.println("ELija que quiera hacer: \n"
+                            + "[1] Comprar\n"
+                            + "[2] Vender");
+                    int iow = entrada.nextInt();
+                    int poch;
+                    switch (iow) {
+                        case 1:
+                            for (Concesionaria c : con) {
+                                System.out.println(c);
+                            }
+                            System.out.print("Ingrese la posicion del vehiculo que desea vender: ");
+                            poch = entrada.nextInt();
+                            int o = 0;
+                            
+                            break;
+                        case 2:
+                            for (Cliente c : cli) {
+                                System.out.println("" + c.getVehi().indexOf(c) + c);
+                            }
+                            
+                            System.out.print("Ingrese la posicion del vehiculo que desea vender: ");
+                            poch = entrada.nextInt();
+                            System.out.println("");
+                            for (Concesionaria c : con) {
+                                System.out.println(c);
+                            }
+                            System.out.println("Elija a que concesionaria desea vender: ");
+                            for (Cliente c : cli) {
+                                if(c.getVehi().indexOf(c) == poch){
+                                    con.add(c.getVehi());
+                                    con.get(ide)
+                                }
+                            }
+                            int chacha;
+                            for (Cliente c : cli) {
+                                for (Concesionaria cc : con) {
+                                    chacha++;
+                                    if(c.getVehi().indexOf(c) == poch && cc.getVehi().size() == cc.getVehi().indexOf(cc)){
+                                        cc.getVehi().addAll(c.getVehi());
+                                        c.setSaldo(c.getSaldo() + c.getVehi().get(poch).precio);
+                                        cc.setSaldo(cc.getSaldo() - c.getVehi().get(poch).getPrecio());
+                                        c.getVehi().remove(poch);
+                                        
+                                        
+                                    }
+                                }
+                            }
+                            break;
+                    }
                     break;
             }
 
