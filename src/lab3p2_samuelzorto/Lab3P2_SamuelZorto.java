@@ -250,7 +250,72 @@ public class Lab3P2_SamuelZorto {
                                     break;
 
                                 case 2:
-
+                                    System.out.println("");
+                                    for (Concesionaria cc : con) {
+                                        System.out.println("" + cc.getVehi().indexOf(cc) + "- " + cc.getVehi());
+                                    }
+                                    System.out.print("Ingrese que vehiculo desea modificar: ");
+                                    int posss = entrada.nextInt();
+                                    int elegi;
+                                    for (Concesionaria cc : con) {
+                                        if(cc.getVehi().get(posss) instanceof Carro){
+                                            System.out.println("");
+                                            System.out.println("Ingrese lo que quiere modificar:\n"
+                                                    + "[1] Cantidad de puertas\n"
+                                                    + "[2] Desc. de motor\n"
+                                                    + "[3] Velocidad maxima");
+                                            elegi = entrada.nextInt();
+                                            switch(elegi){
+                                                case 1:
+                                                    System.out.print("Ingrese la cantidad de puertas: ");
+                                                    int pu = entrada.nextInt();
+                                                    ((Carro)c.getVehi().get(c.getVehi().indexOf(c))).setPuertas(pu);
+                                                    break;
+                                                case 2:
+                                                    System.out.print("Ingrese la descripcion del motor: ");
+                                                    String desccc = entrad.nextLine();
+                                                    ((Carro)c.getVehi().get(c.getVehi().indexOf(c))).setDescripcion(desccc);
+                                                    break;
+                                                case 3:
+                                                    System.out.print("Ingrese la velocidad maxima: ");
+                                                    int vell = entrada.nextInt();
+                                                    ((Carro)c.getVehi().get(c.getVehi().indexOf(c))).setVelocidad(vell);
+                                                    break;
+                                            }
+                                        }else if(cc.getVehi().get(posss) instanceof Camion){
+                                            System.out.println("");
+                                            System.out.println("Ingrese lo que quiere modificar:\n"
+                                                    + "[1] Vol. de carga\n"
+                                                    + "[2] Atura\n"
+                                                    + "[2] Retroexcavadora");
+                                            int jk = entrada.nextInt();
+                                            switch(jk){
+                                                
+                                            }
+                                            elegi = entrada.nextInt();
+                                            switch(elegi){
+                                                
+                                            }
+                                        }else if(cc.getVehi().get(posss) instanceof Bus){
+                                            
+                                            elegi = entrada.nextInt();
+                                            switch(elegi){
+                                                
+                                            }
+                                        }else if(cc.getVehi().get(posss) instanceof Moto){
+                                            
+                                            elegi = entrada.nextInt();
+                                            switch(elegi){
+                                                
+                                            }
+                                        }else if(cc.getVehi().get(posss) instanceof Bici){
+                                            
+                                            elegi = entrada.nextInt();
+                                            switch(elegi){
+                                                
+                                            }
+                                        }
+                                    }
                                     break;
 
                                 case 3:
