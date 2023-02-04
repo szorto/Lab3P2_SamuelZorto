@@ -363,15 +363,12 @@ public class Lab3P2_SamuelZorto {
                             }
                             System.out.println("Elija a que concesionaria desea vender: ");
                             for (Cliente c : cli) {
-                                if(c.getVehi().indexOf(c) == poch){
-                                    con.add(c.getVehi());
-                                    con.get(ide)
-                                }
+                                
                             }
                             int chacha;
                             for (Cliente c : cli) {
                                 for (Concesionaria cc : con) {
-                                    chacha++;
+                                    
                                     if(c.getVehi().indexOf(c) == poch && cc.getVehi().size() == cc.getVehi().indexOf(cc)){
                                         cc.getVehi().addAll(c.getVehi());
                                         c.setSaldo(c.getSaldo() + c.getVehi().get(poch).precio);
