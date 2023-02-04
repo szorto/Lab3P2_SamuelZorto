@@ -348,13 +348,13 @@ public class Lab3P2_SamuelZorto {
                             System.out.print("Ingrese la posicion del vehiculo que desea vender: ");
                             poch = entrada.nextInt();
                             int o = 0;
-                            
+
                             break;
                         case 2:
                             for (Cliente c : cli) {
                                 System.out.println("" + c.getVehi().indexOf(c) + c);
                             }
-                            
+
                             System.out.print("Ingrese la posicion del vehiculo que desea vender: ");
                             poch = entrada.nextInt();
                             System.out.println("");
@@ -363,19 +363,25 @@ public class Lab3P2_SamuelZorto {
                             }
                             System.out.println("Elija a que concesionaria desea vender: ");
                             for (Cliente c : cli) {
-                                
+                                for (Concesionaria cc : con) {
+                                    if (cc.getVehi().indexOf(cc) == poch && c.getVehi().size() == c.getVehi().indexOf(c)) {
+                                        c.getVehi().addAll(cc.getVehi());
+                                        cc.setSaldo(cc.getSaldo() + cc.getVehi().get(poch).precio);
+                                        c.setSaldo(cc.getSaldo() - cc.getVehi().get(poch).getPrecio());
+                                        cc.getVehi().remove(poch);
+                                    }
+                                }
                             }
                             int chacha;
                             for (Cliente c : cli) {
                                 for (Concesionaria cc : con) {
-                                    
-                                    if(c.getVehi().indexOf(c) == poch && cc.getVehi().size() == cc.getVehi().indexOf(cc)){
+
+                                    if (c.getVehi().indexOf(c) == poch && cc.getVehi().size() == cc.getVehi().indexOf(cc)) {
                                         cc.getVehi().addAll(c.getVehi());
                                         c.setSaldo(c.getSaldo() + c.getVehi().get(poch).precio);
                                         cc.setSaldo(cc.getSaldo() - c.getVehi().get(poch).getPrecio());
                                         c.getVehi().remove(poch);
-                                        
-                                        
+
                                     }
                                 }
                             }
